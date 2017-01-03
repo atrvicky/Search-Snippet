@@ -48,7 +48,7 @@ queryBox.oninput = function(){
       var c = listLower.slice(listLower.search(queryLower)+queryLower.length);  //Any string after the queried term
 
 //Done! Now just concatenate a,b and c with opening and closing "<strong>" tags before and after b
-      slicedQuery = a+"<strong><em>"+b+"</em></strong>"+c;
+      slicedQuery = a+"<strong><mark>"+b+"</mark></strong>"+c;
       sortedTerm.innerHTML = slicedQuery;
       sortedList.appendChild(sortedTerm);
     }
@@ -61,7 +61,7 @@ queryBox.oninput = function(){
 // And a Bonus content. Just for you!
   if (sortedList.innerHTML == "") {
     var sortedTerm = document.createElement('li');
-    sortedTerm.innerHTML = "Oops! We had no match (0_0) Try a different term!";
+    sortedTerm.innerHTML = "Oopy! We had no match (0_0) Try a different term!";
     sortedList.appendChild(sortedTerm);
     sortedList.getElementsByTagName('li')[0].style.color = "#ad0a0a";
   }
